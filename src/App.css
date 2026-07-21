@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(135,206,235,0.85) 0%,
+      rgba(204,239,255,0.75) 35%,
+      rgba(245,249,247,0.85) 70%,
+      rgba(243,231,211,0.92) 100%
+    ),
+    url('/images/beach-path.jpg');
+
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #172033;
+}
+.app {
+  min-height: 100vh;
+  padding: 22px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.hero {
+  margin-top: 20px;
+  padding: 34px;
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.96), rgba(240,249,255,0.9));
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(255,255,255,0.7);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #0f766e;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 7vw, 4.5rem);
+  line-height: 1;
+  margin: 0 0 16px;
+  letter-spacing: -0.05em;
+}
+
+.subtitle {
+  font-size: 1.12rem;
+  line-height: 1.65;
+  max-width: 760px;
+  margin: 0;
+  color: #475569;
+}
+
+.subtitle.small {
+  margin-bottom: 24px;
+}
+
+.groupTitle {
+  margin: 34px 0 14px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #64748b;
+}
+
+.quickGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  min-height: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: 28px;
+  padding: 22px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.09);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.14);
+  background: #ffffff;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.pageCard {
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 32px;
+  background: rgba(255,255,255,0.94);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #0f766e;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.pageContent {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.pageContent ul {
+  padding-left: 22px;
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 16px;
+  }
+
+  .hero,
+  .pageCard {
+    padding: 24px;
+    border-radius: 26px;
+  }
+
+  .quickGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    min-height: 104px;
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .cardIcon {
+    font-size: 1.8rem;
+  }
+}
+
+.heroFull {
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.heroBadge {
+  min-width: 210px;
+  aspect-ratio: 1;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #fef3c7, #bae6fd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+.heroBadge span {
+  font-size: 3.2rem;
+  margin-bottom: 12px;
+}
+
+.heroBadge strong {
+  font-size: 1.4rem;
+}
+
+.heroBadge small {
+  margin-top: 8px;
+  color: #475569;
+}
+
+@media (max-width: 720px) {
+  .heroFull {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .heroBadge {
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: auto;
+    padding: 24px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  .heroBadge span {
+    margin-bottom: 0;
+  }
+}
+.heroPhoto {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(15, 23, 42, 0.82),
+      rgba(15, 23, 42, 0.45)
+    ),
+    url('/images/house-front.jpg');
+  background-size: cover;
+  background-position: center 58%;
+}
+
+.heroPhoto .eyebrow,
+.heroPhoto .subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.heroPhoto h1 {
+  color: white;
+}
+
+.heroPhoto .heroBadge {
+  background: rgba(255, 255, 255, 0.88);
+  color: #172033;
+  backdrop-filter: blur(8px);
+}
+
+.loginPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginCard {
+  width: 400px;
+  max-width: 90%;
+  padding: 40px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.loginCard input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.loginCard button {
+  margin-top: 16px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  background: #0f766e;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.loginCard button:hover {
+  background: #115e59;
+}
+
+.logoutButton {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.85);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.infoBlock {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.8);
+}
+
+
+
+.infoBlock h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.warningBlock {
+  background: rgba(254, 243, 199, 0.9);
+}
+
+.guideTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.guideTable td {
+  padding: 8px 0;
+  vertical-align: top;
+}
+
+.guideTable td:first-child {
+  width: 40px;
+  font-weight: bold;
+}
+
+.wifiCredentials {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.wifiItem {
+  background: white;
+  padding: 18px 22px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.wifiLabel {
+  display: block;
+  font-size: 0.9rem;
+  color: #0f766e;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.wifiValue {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.textLink {
+  color: #0f766e;
+  font-weight: bold;
+}
+
+.manualLink {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: #0f766e;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.manualLink:hover {
+  background: #115e59;
+}
+
+.guideImage {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+}
