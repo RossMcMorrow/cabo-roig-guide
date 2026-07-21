@@ -1,13 +1,15 @@
 import GuidePage from '../../components/GuidePage'
 
 function CeilingFan() {
+  const base = import.meta.env.BASE_URL
+
   return (
     <GuidePage title="Ceiling Fan" icon="🌀">
       <div className="infoBlock">
         <h2>🌀 Ceiling Fan</h2>
 
         <img
-          src="/images/ceiling-fan.png"
+          src={`${base}images/ceiling-fan.png`}
           alt="Ceiling fan"
           className="guideImage"
         />
@@ -33,10 +35,11 @@ function CeilingFan() {
         <h2>🎮 Remote Control</h2>
 
         <img
-  src="/images/c-remote.jpg"
-  alt="Ceiling fan remote"
-  className="guideImage rotate90"
-/>
+          src={`${base}images/c-remote.jpg`}
+          alt="Ceiling fan remote"
+          className="guideImage rotate90"
+        />
+
         <p>
           Please refer to the labelled remote image below for the different
           functions.
@@ -74,14 +77,14 @@ function CeilingFan() {
         </p>
       </div>
 
-        <a
-  href="/manuals/ceiling-fan-manual.pdf"
-  target="_blank"
-  rel="noreferrer"
-  className="manualLink"
->
-  📄 Open Ceiling Fan Manual
-</a>
+      <a
+        href={`${base}manuals/ceiling-fan-manual.pdf`}
+        target="_blank"
+        rel="noreferrer"
+        className="manualLink"
+      >
+        📄 Open Ceiling Fan Manual
+      </a>
     </GuidePage>
   )
 }
